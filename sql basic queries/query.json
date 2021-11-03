@@ -1,0 +1,23 @@
+{
+    "distinct":"select distinct `First Name` from employee;",
+    "ascending":"select * from employee order by `salary` asc;",
+    "decending":"select * from employee order by `salary` desc;",
+    "null value":"select * from employee where `First Name` is null;",
+    "not null":"select * from employee where `First Name` is not null;",
+    "min":"select min(`salary`) from employee;",
+    "max":"select max(`salary`) from employee;",
+    "count":"select count(`salary`) from employee;",
+    "avg":"select avg(`salary`) from employee;",
+    "sum":"select sum(`salary`) from employee;",
+    "inner join":"select * from employee inner join emp_personal_data on employee.`emp id` = emp_personal_data.`emp id`;",
+    "left join":"select * from employee left join emp_personal_data on employee.`emp id` = emp_personal_data.`emp id`;",
+    "right join":"select * from employee right join emp_personal_data on employee.`emp id` = emp_personal_data.`emp id`;",
+    "self join":"select * from employee , emp_personal_data order by employee.`emp id`;,",
+    "union":"select `emp id` from employee union select `emp id` from emp_personal_data;",
+    "group by":"select count(age),age from emp_personal_data group by age;",
+    "having":"select * from employee having `emp id` > 1;",
+    "group by having":"select count(age),age from emp_personal_data group by age having age = 23;",
+    "ifnull":"select ifnull(age,0) from emp_personal_data;",
+    "view":"create view first_view as select `First name`,`Last name` from employee;",
+    "call view":"select * from first_view"
+}
